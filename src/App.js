@@ -13,9 +13,9 @@ function App() {
   return (
     <div>
       <Navbar/>
-      <Router>
+      <Router basename='Text-Utils-Web-App'>
       <Routes>
-<Route path='/' element={<Home/>}/>
+<Route exact path='/Text-Utils-Web-App' element={<Home/>}/>
 <Route path='/clipboard' element={<Clipboard/>}/>
 <Route path='/accordian' element={<Accordian/>}/>
 <Route path='/box' element={<Box/>}/>
