@@ -1,38 +1,91 @@
-.App {
+.navbar {
+  background-color: cadetblue;
+}
+
+#navbarSupportedContent {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  transition: all ease 0.5s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.img:hover {
+  padding: 15px;
+}
+
+#link {
+  text-decoration: none;
+}
+#preview{
+  color: cadetblue;
+}
+.accordion-button-custom {
+  background: linear-gradient(135deg, #1e626d 0%, #2575fc 100%);
+  color: #fff;
+  font-weight: 600;
+  padding: 15px 20px;
+  border: none;
+  width: 100%;
+  text-align: left;
+  border-radius: 8px;
+  position: relative;
+  transition: background 0.4s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button-custom i {
+  margin-right: 12px;
+}
+
+.accordion-button-custom:hover {
+  background: linear-gradient(135deg, #16383d, #1eafe0);
+  transform: translateY(-2px);
+}
+
+.accordion-body-custom {
+  background-color: #f9f9fb;
+  padding: 20px;
+  border-left: 4px solid #1e626d;
+  border-radius: 0 0 8px 8px;
+  animation: fadeSlideDown 0.5s ease;
+}
+
+.card {
+  border: none;
+  background: transparent;
+}
+
+.card-header {
+  background: transparent;
+}
+
+/* Fade + Slide animation for body */
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Font awesome icon animation */
+.accordion-button-custom i {
+  transition: transform 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.accordion-button-custom.collapsed i {
+  transform: rotate(0deg);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.accordion-button-custom:not(.collapsed) i {
+  transform: rotate(45deg); /* transforms plus into a cross */
 }
