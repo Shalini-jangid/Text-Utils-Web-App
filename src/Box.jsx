@@ -18,6 +18,7 @@ function Box() {
   };
   return (
     <div>
+      <h4>Click on each colored box</h4>
     <div style={{ padding: '2rem' }}>
       <div
         ref={outerRef}
